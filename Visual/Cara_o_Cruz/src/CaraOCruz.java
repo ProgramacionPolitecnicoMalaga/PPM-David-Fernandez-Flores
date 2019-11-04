@@ -30,9 +30,9 @@ public class CaraOCruz {
     private JLabel LImagen;
     private JButton butInicio;
 
-    // ( TRABAJAR O BORRAR A EXCEPCIÓN )
 
     DecimalFormat formatoDosDecimales = new DecimalFormat("#.##");
+
 
     private int aleatorio;
     public static final int CARA = 0;
@@ -112,16 +112,13 @@ public class CaraOCruz {
                 contCruz = 0;
                 tiradasHechas = 0;
                 double tiradasAHacer = Double.parseDouble(txtSetTiradas.getText());
-                try {
+                
                     for (int i = 0; i < tiradasAHacer; i++) {
                         ConseguirAleatorio();
                         UnaTirada();
                     }
                     proporcionarPorcentaje();
-                    EscribirEnPantalla();
-                } catch (InputMismatchException excep){
-                    txtSetTiradas.setText(" Introduzca un valor numérico");
-                }
+                    EscribirEnPantalla();                 
                 }
         });
 
