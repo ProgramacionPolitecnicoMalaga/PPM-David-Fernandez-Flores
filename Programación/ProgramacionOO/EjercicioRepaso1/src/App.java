@@ -3,6 +3,15 @@ import java.util.Scanner;
 
 public class App {
 
+    public static final int MM = 1;
+    public static final int CM = 2;
+    public static final int M = 3;
+
+    public static final int HIPOTENUSA_BY_CATETOS = 1;
+    public static final int CATETO_BY_CATETO_E_HIPOTENUSA = 2;
+    public static final int AREA_CON_CATETO_E_HIPOTENUSA = 3;
+    public static final int AREA_BY_CATETOS = 4;
+
     public static void main(String[] args) {
         int opcion1 = 0, opcion2 = 0;
         double hipotenusa, catetoPrimero, catetoSegundo, area;
@@ -18,13 +27,13 @@ public class App {
 
         opcion1 = lectorTeclado.nextInt();
 
-        if (opcion1 == 1){
+        if (opcion1 == MM){
             unidadMedida = "mm";
         }
-        if (opcion1 == 2){
+        if (opcion1 == CM){
             unidadMedida = "cm";
         }
-        if (opcion1 == 3){
+        if (opcion1 == M){
             unidadMedida = "m";
         }
         else{
@@ -40,7 +49,7 @@ public class App {
 
         opcion2 = lectorTeclado.nextInt();
 
-        if (opcion2 == 1){
+        if (opcion2 == HIPOTENUSA_BY_CATETOS){
             System.out.println(" Cateto primero :  ");
             catetoPrimero = lectorTeclado.nextDouble();
             System.out.println(" Cateto segundo :  ");
@@ -51,7 +60,7 @@ public class App {
 
             System.out.println("  Hipotenusa :  "+formateador.format(hipotenusa)+" "+unidadMedida);
         }
-        if (opcion2 == 2){
+        if (opcion2 == CATETO_BY_CATETO_E_HIPOTENUSA){
             System.out.println(" Cateto primero :  ");
             catetoPrimero = lectorTeclado.nextDouble();
             System.out.println(" Hipotenusa :  ");
@@ -62,7 +71,7 @@ public class App {
 
             System.out.println("  Cateto restante :  "+formateador.format(catetoSegundo)+" "+unidadMedida);
         }
-        if (opcion2 == 3){
+        if (opcion2 == AREA_CON_CATETO_E_HIPOTENUSA){
             System.out.println(" Cateto primero :  ");
             catetoPrimero = lectorTeclado.nextDouble();
             System.out.println(" Hipotenusa :  ");
@@ -74,7 +83,7 @@ public class App {
 
             System.out.println("  El área del triangulo es de :  "+formateador.format(area)+" "+unidadMedida);
         }
-        if (opcion2 == 4){
+        if (opcion2 == AREA_BY_CATETOS){
             System.out.println(" Cateto primero :  ");
             catetoPrimero = lectorTeclado.nextDouble();
             System.out.println(" Cateto segundo :  ");
