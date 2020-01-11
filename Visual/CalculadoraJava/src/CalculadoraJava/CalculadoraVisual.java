@@ -27,6 +27,7 @@ public class CalculadoraVisual {
     private JButton butDivision;
     private JPanel PanelTablaBotones;
     private JButton butEqual;
+    private JTextField txtSoluciones;
 
     private static final int SUMA = 1;
     private static final int RESTA = 2;
@@ -37,8 +38,10 @@ public class CalculadoraVisual {
 
     private Operaciones op = new Operaciones();
     private DecimalFormat formateo = new DecimalFormat("####,##");
-    private double numerocalculo1=0, numerocalculo2=0, resultado, variableDeAsignacion=0;
+    private double numerocalculo1=0, numerocalculo2=0, variableDeAsignacion=0;
     private int operacionARealizar;
+    private boolean botonComa = false;
+    private double solucion;
 
     public CalculadoraVisual() {
         butNumeroCero.addActionListener(new ActionListener() {
@@ -138,7 +141,7 @@ public class CalculadoraVisual {
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
                 operacionARealizar = RAIZ;
-                txtCommandLine.setText("Pulse el boton de Operación");
+                txtCommandLine.setText(numerocalculo1 + " elevado a ");
             }
         });
         butEqual.addActionListener(new ActionListener() {
@@ -149,12 +152,21 @@ public class CalculadoraVisual {
                 mostrarResultadosEnPantalla();
             }
         });
+        butPuntoComa.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.getText();
+                numerocalculo1 = Double.parseDouble(numerocalculo1+".");
+                txtCommandLine.setText(numerocalculo1 + ",");
+                botonComa = true;
+            }
+        });
     }
     public void NotSupportedAction(){
         txtCommandLine.setText("  Esta operacion no está disponible aún.");
     }
     public void mostrarResultadosEnPantalla(){
-        txtCommandLine.setText(String.valueOf(resultado));
+        txtSoluciones.setText(String.valueOf(solucion));
     }
     public void evaluacionDeOperacion(){
         switch (operacionARealizar){
@@ -162,25 +174,31 @@ public class CalculadoraVisual {
             case RESTA: operacionResta(); break;
             case MULTIPLICACION: operacionMultiplicacion(); break;
             case DIVISION: operacionDivision(); break;
-            case RAIZ: operacionRaizCuadrada(); break;
+            case RAIZ: operacionPotencia(); break;
             default: NotSupportedAction();
         }
     }
     public void operacionSuma(){
-        op.OperacionSuma(numerocalculo1,numerocalculo2);
+        txtCommandLine.setText(numerocalculo1 +"  +  "+numerocalculo2);
+        solucion = op.OperacionSuma(numerocalculo1,numerocalculo2);
     }
     public void operacionResta(){
-        op.OperacionResta(numerocalculo1,numerocalculo2);
+        txtCommandLine.setText(numerocalculo1 +"  -  "+numerocalculo2);
+        solucion = op.OperacionResta(numerocalculo1,numerocalculo2);
     }
     public void operacionMultiplicacion(){
-        op.OperacionMultiplicacion(numerocalculo1,numerocalculo2);
+        txtCommandLine.setText(numerocalculo1 +"  x  "+numerocalculo2);
+        solucion = op.OperacionMultiplicacion(numerocalculo1,numerocalculo2);
     }
     public void operacionDivision(){
-        op.OperacionDivision(numerocalculo1,numerocalculo2);
+        txtCommandLine.setText(numerocalculo1 +"  /  "+numerocalculo2);
+        solucion = op.OperacionDivision(numerocalculo1,numerocalculo2);
     }
-    public void operacionRaizCuadrada(){
-        op.OperacionRaizCuadrada(numerocalculo1);
+    public void operacionPotencia(){
+        txtCommandLine.setText(numerocalculo1 +"  elevado a  "+numerocalculo2);
+        solucion = op.OperacionPotencia(numerocalculo1,numerocalculo2);
     }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("CALCULADORA");
         frame.setContentPane(new CalculadoraVisual().panelCalculadora);

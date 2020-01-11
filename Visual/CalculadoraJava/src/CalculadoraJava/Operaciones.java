@@ -5,22 +5,24 @@ public class Operaciones {
     private double resultado;
     public String prueba;
 
-    public void OperacionSuma(double numerocalculo1, double numerocalculo2){
+    public double OperacionSuma(double numerocalculo1, double numerocalculo2){
         resultado = numerocalculo1+numerocalculo2;
+        return resultado;
     }
-    public void OperacionResta(double numerocalculo1, double numerocalculo2){
+    public double OperacionResta(double numerocalculo1, double numerocalculo2){
         resultado = numerocalculo1 - numerocalculo2;
+        return resultado;
     }
-    public void OperacionMultiplicacion(double numerocalculo1,double numerocalculo2){
+    public double OperacionMultiplicacion(double numerocalculo1,double numerocalculo2){
         resultado = numerocalculo1 * numerocalculo2;
+        return resultado;
     }
-    public void OperacionDivision(double numerocalculo1,double numerocalculo2){
+    public double OperacionDivision(double numerocalculo1,double numerocalculo2){
         resultado = numerocalculo1 / numerocalculo2;
+        return resultado;
     }
-    public void OperacionRaizCuadrada(double numerocalculo1){
-        resultado = Math.sqrt(numerocalculo1);
-    }
-    public void OperacionPotencia(double numerocalculo1, double numerocalculo2){
+    public double OperacionPotencia(double numerocalculo1, double numerocalculo2){
         resultado = Math.pow(numerocalculo1,numerocalculo2);
+        return resultado;
     }
 }
