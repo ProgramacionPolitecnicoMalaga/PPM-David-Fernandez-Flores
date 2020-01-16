@@ -28,6 +28,8 @@ public class CalculadoraVisual {
     private JPanel PanelTablaBotones;
     private JButton butEqual;
     private JTextField txtSoluciones;
+    private JButton butBorrar;
+    private JButton deleteButton;
 
     private static final int SUMA = 1;
     private static final int RESTA = 2;
@@ -36,112 +38,141 @@ public class CalculadoraVisual {
     private static final int RAIZ = 5;
     private static final int POTENCIA = 6;
 
-    private Operaciones op = new Operaciones();
-    private DecimalFormat formateo = new DecimalFormat("####,##");
-    private double numerocalculo1=0, numerocalculo2=0, variableDeAsignacion=0;
-    private int operacionARealizar;
-    private boolean botonComa = false;
+    private double num2;
     private double solucion;
+    private boolean botonComa;
+    private int operacionARealizar;
+    private double numerocalculo1 = 0;
+    private double numerocalculo2 = 0;
+    private Operaciones op = new Operaciones();
+    private DecimalFormat formateo = new DecimalFormat("####.##");
+    private DecimalFormat d = new DecimalFormat("####");
+    BorrarPantalla borrar = new BorrarPantalla();
 
     public CalculadoraVisual() {
         butNumeroCero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(0));
+                txtCommandLine.setText(txtCommandLine.getText()+0);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+
             }
         });
         butNumeroUno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(1));
+                txtCommandLine.setText(txtCommandLine.getText()+1);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroDos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(2));
+                txtCommandLine.setText(txtCommandLine.getText()+2);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroTres.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(3));
+                txtCommandLine.setText(txtCommandLine.getText()+3);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroCuatro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(4));
+                txtCommandLine.setText(txtCommandLine.getText()+4);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroCinco.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(5));
+                txtCommandLine.setText(txtCommandLine.getText()+5);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroSeis.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(6));
+                txtCommandLine.setText(txtCommandLine.getText()+6);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroSiete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(7));
+                txtCommandLine.setText(txtCommandLine.getText()+7);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroOcho.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(8));
+                txtCommandLine.setText(txtCommandLine.getText()+8);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroNueve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.setText(String.valueOf(9));
+                txtCommandLine.setText(txtCommandLine.getText()+9);
+                num2 = Double.parseDouble(txtCommandLine.getText());
+                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butSuma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText("");
+                txtSoluciones.setText(numerocalculo1+" + ");
                 operacionARealizar = SUMA;
-                txtCommandLine.setText(numerocalculo1+" + ");
             }
         });
         butResta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText("");
+                txtSoluciones.setText(numerocalculo1+" - ");
                 operacionARealizar = RESTA;
-                txtCommandLine.setText(numerocalculo1+" - ");
             }
         });
         butMultiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText("");
+                txtSoluciones.setText(numerocalculo1+" x ");
                 operacionARealizar = MULTIPLICACION;
-                txtCommandLine.setText(numerocalculo1+" x ");
             }
         });
         butDivision.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText("");
+                txtSoluciones.setText(numerocalculo1+" / ");
                 operacionARealizar = DIVISION;
-                txtCommandLine.setText(numerocalculo1+" / ");
             }
         });
         butRaizCuadrada.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText("");
+                txtSoluciones.setText(numerocalculo1+" elevado a ");
                 operacionARealizar = RAIZ;
-                txtCommandLine.setText(numerocalculo1 + " elevado a ");
             }
         });
         butEqual.addActionListener(new ActionListener() {
@@ -155,10 +186,21 @@ public class CalculadoraVisual {
         butPuntoComa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                txtCommandLine.getText();
-                numerocalculo1 = Double.parseDouble(numerocalculo1+".");
-                txtCommandLine.setText(numerocalculo1 + ",");
+                numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
+                txtCommandLine.setText(d.format(numerocalculo1) + ".");
                 botonComa = true;
+            }
+        });
+        butBorrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                borrar.borradoDePantalla(txtCommandLine,txtSoluciones);
+            }
+        });
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText(borrar.evaluacionPantalla(txtCommandLine));
             }
         });
     }
@@ -207,5 +249,4 @@ public class CalculadoraVisual {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-
 }
