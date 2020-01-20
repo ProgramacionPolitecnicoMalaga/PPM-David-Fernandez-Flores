@@ -29,105 +29,96 @@ public class CalculadoraVisual {
     private JButton butEqual;
     private JTextField txtSoluciones;
     private JButton butBorrar;
-    private JButton deleteButton;
+    private JButton butDelete;
+    private JButton butLn;
+    private JButton butLog;
+    private JButton butRaiz;
+    private JButton butSeno;
+    private JButton butCoseno;
+    private JButton butTangente;
 
     private static final int SUMA = 1;
     private static final int RESTA = 2;
     private static final int MULTIPLICACION = 3;
     private static final int DIVISION = 4;
-    private static final int RAIZ = 5;
-    private static final int POTENCIA = 6;
+    private static final int POTENCIA = 5;
+    private static final int NEPERIANO = 6;
+    private static final int LOGARITMO = 7;
+    private static final int RAIZ = 8;
+    private static final int SENO = 9;
+    private static final int COSENO = 10;
+    private static final int TANGENTE = 11;
 
-    private double num2;
     private double solucion;
-    private boolean botonComa;
     private int operacionARealizar;
     private double numerocalculo1 = 0;
     private double numerocalculo2 = 0;
+    private boolean aproximacionesSi = false;
+    private boolean aproximacionesNO = false;
     private Operaciones op = new Operaciones();
-    private DecimalFormat formateo = new DecimalFormat("####.##");
-    private DecimalFormat d = new DecimalFormat("####");
     BorrarPantalla borrar = new BorrarPantalla();
+    private DecimalFormat d = new DecimalFormat("####");
+    private DecimalFormat formatoDecimal = new DecimalFormat("####.###");
 
     public CalculadoraVisual() {
         butNumeroCero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+0);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-
             }
         });
         butNumeroUno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+1);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroDos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+2);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroTres.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+3);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroCuatro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+4);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroCinco.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+5);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroSeis.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+6);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroSiete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+7);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroOcho.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+8);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butNumeroNueve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(txtCommandLine.getText()+9);
-                num2 = Double.parseDouble(txtCommandLine.getText());
-                //concat.concatenacionEvaluada(txtCommandLine,num2);
             }
         });
         butSuma.addActionListener(new ActionListener() {
@@ -172,7 +163,7 @@ public class CalculadoraVisual {
                 numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
                 txtCommandLine.setText("");
                 txtSoluciones.setText(numerocalculo1+" elevado a ");
-                operacionARealizar = RAIZ;
+                operacionARealizar = POTENCIA;
             }
         });
         butEqual.addActionListener(new ActionListener() {
@@ -186,9 +177,7 @@ public class CalculadoraVisual {
         butPuntoComa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                numerocalculo1 = Double.parseDouble(txtCommandLine.getText());
-                txtCommandLine.setText(d.format(numerocalculo1) + ".");
-                botonComa = true;
+                txtCommandLine.setText(d.format(Double.parseDouble(txtCommandLine.getText())) + ".");
             }
         });
         butBorrar.addActionListener(new ActionListener() {
@@ -197,10 +186,58 @@ public class CalculadoraVisual {
                 borrar.borradoDePantalla(txtCommandLine,txtSoluciones);
             }
         });
-        deleteButton.addActionListener(new ActionListener() {
+        butDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtCommandLine.setText(borrar.evaluacionPantalla(txtCommandLine));
+            }
+        });
+        butLn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText("Logaritmo neperiano de :  ");
+                operacionARealizar = NEPERIANO;
+            }
+        });
+        butLog.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText(" Logaritmo de :  ");
+                operacionARealizar = LOGARITMO;
+            }
+        });
+        butRaiz.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText(" Raiz cuadrada de :  ");
+                operacionARealizar = RAIZ;
+            }
+        });
+        butSeno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText(" Seno de :  ");
+                operacionARealizar = SENO;
+            }
+        });
+        butCoseno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText(" Coseno de :  ");
+                operacionARealizar = COSENO;
+            }
+        });
+        butTangente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                txtCommandLine.setText("");
+                txtSoluciones.setText(" Tangente de :  ");
+                operacionARealizar = TANGENTE;
             }
         });
     }
@@ -208,7 +245,8 @@ public class CalculadoraVisual {
         txtCommandLine.setText("  Esta operacion no está disponible aún.");
     }
     public void mostrarResultadosEnPantalla(){
-        txtSoluciones.setText(String.valueOf(solucion));
+        txtCommandLine.setText("");
+        txtCommandLine.setText(String.valueOf(formatoDecimal.format(solucion)));
     }
     public void evaluacionDeOperacion(){
         switch (operacionARealizar){
@@ -216,29 +254,59 @@ public class CalculadoraVisual {
             case RESTA: operacionResta(); break;
             case MULTIPLICACION: operacionMultiplicacion(); break;
             case DIVISION: operacionDivision(); break;
-            case RAIZ: operacionPotencia(); break;
+            case POTENCIA: operacionPotencia(); break;
+            case NEPERIANO: operacionLn(); break;
+            case LOGARITMO: operacionLog(); break;
+            case RAIZ: operacionRaiz(); break;
+            case SENO: operacionSeno(); break;
+            case COSENO: operacionCoseno(); break;
+            case TANGENTE: operacionTangente(); break;
             default: NotSupportedAction();
         }
     }
     public void operacionSuma(){
-        txtCommandLine.setText(numerocalculo1 +"  +  "+numerocalculo2);
+        txtSoluciones.setText(numerocalculo1 +"  +  "+numerocalculo2);
         solucion = op.OperacionSuma(numerocalculo1,numerocalculo2);
     }
     public void operacionResta(){
-        txtCommandLine.setText(numerocalculo1 +"  -  "+numerocalculo2);
+        txtSoluciones.setText(numerocalculo1 +"  -  "+numerocalculo2);
         solucion = op.OperacionResta(numerocalculo1,numerocalculo2);
     }
     public void operacionMultiplicacion(){
-        txtCommandLine.setText(numerocalculo1 +"  x  "+numerocalculo2);
+        txtSoluciones.setText(numerocalculo1 +"  x  "+numerocalculo2);
         solucion = op.OperacionMultiplicacion(numerocalculo1,numerocalculo2);
     }
     public void operacionDivision(){
-        txtCommandLine.setText(numerocalculo1 +"  /  "+numerocalculo2);
+        txtSoluciones.setText(numerocalculo1 +"  /  "+numerocalculo2);
         solucion = op.OperacionDivision(numerocalculo1,numerocalculo2);
     }
     public void operacionPotencia(){
-        txtCommandLine.setText(numerocalculo1 +"  elevado a  "+numerocalculo2);
+        txtSoluciones.setText(numerocalculo1 +"  elevado a  "+numerocalculo2);
         solucion = op.OperacionPotencia(numerocalculo1,numerocalculo2);
+    }
+    public void operacionLn(){
+        txtSoluciones.setText("  Logaritmo neperiano de :  "+numerocalculo2);
+        solucion = op.OperacionNeperiano(numerocalculo2);
+    }
+    public void operacionLog(){
+        txtSoluciones.setText("  Logaritmo de :  "+numerocalculo2);
+        solucion = op.OperacionLogaritmo(numerocalculo2);
+    }
+    public void operacionRaiz(){
+        txtSoluciones.setText("  Raiz cuadrada de : "+numerocalculo2);
+        solucion = op.OperacionRaiz(numerocalculo2);
+    }
+    public void operacionSeno(){
+        txtSoluciones.setText("  Seno de : "+numerocalculo2);
+        solucion = op.OperacionSeno(numerocalculo2);
+    }
+    public void operacionCoseno(){
+        txtSoluciones.setText("  Coseno de : "+numerocalculo2);
+        solucion = op.OperacionCoseno(numerocalculo2);
+    }
+    public void operacionTangente(){
+        txtSoluciones.setText("  Tangente de : "+numerocalculo2);
+        solucion = op.OperacionTangente(numerocalculo2);
     }
 
     public static void main(String[] args) {
