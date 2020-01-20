@@ -17,13 +17,13 @@ public class InterfazUsuario {
         comisionado.setVentasComisionados(ventasRealizadas);
         porHoras.setHorasTrabajadas(horasTrabajadas);
     }
-    public void conseguirAreaDeLasFiguras(Comisionados comisionados, PorHoras porHoras, Asalariado asalariado) {
+    public void conseguirSalarios(Comisionados comisionados, PorHoras porHoras, Asalariado asalariado) {
         comisionados.calcularSalarioComisionados(comisionados);
         porHoras.calcularSalarioPorHoras(porHoras);
         asalariado.calcularSalarioAsalariado(asalariado);
     }
 
-    public void adicionEnListaDeLasFigurasConSusAreas(ListaDeTrabajadores lista, Empleados comisionado, Empleados porHoras, Empleados asalariados) {
+    public void adicionEnListaDeEmpleados(ListaDeTrabajadores lista, Empleados comisionado, Empleados porHoras, Empleados asalariados) {
         lista.añadirEmpleado(comisionado);
         lista.añadirEmpleado(porHoras);
         lista.añadirEmpleado(asalariados);

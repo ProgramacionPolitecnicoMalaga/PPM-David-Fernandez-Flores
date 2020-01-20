@@ -7,8 +7,8 @@ public class App {
         Empleados emp3 = new Asalariado("Albeto","Mate","2154POO");
 
         interfazUsuario.valoresInicialesVentasHoras(emp1,emp2);
-        interfazUsuario.conseguirAreaDeLasFiguras((Comisionados)emp1,(PorHoras)emp2,(Asalariado)emp3);
-        interfazUsuario.adicionEnListaDeLasFigurasConSusAreas(listaDeTrabajadores,emp1,emp2,emp3);
+        interfazUsuario.conseguirSalarios((Comisionados)emp1,(PorHoras)emp2,(Asalariado)emp3);
+        interfazUsuario.adicionEnListaDeEmpleados(listaDeTrabajadores,emp1,emp2,emp3);
         interfazUsuario.mostrarLista(listaDeTrabajadores);
     }
 }

@@ -93,9 +93,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579033669724" />
-    <state x="65" y="0" key="new project wizard" timestamp="1579001086456">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579077661768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1579001086456" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579077661768" />
+    <state x="65" y="0" key="new project wizard" timestamp="1579080512891">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1579080512891" />
   </component>
 </project>
