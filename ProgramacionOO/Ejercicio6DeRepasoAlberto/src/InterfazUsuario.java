@@ -58,7 +58,7 @@ public class InterfazUsuario {
     }
 
     private Vehiculo insertarVehiculo() {
-        vehiculo1 = new Vehiculo("Yaris","Toyota","rojo","01/02/03","Gasolina");
+        vehiculo1 = new Vehiculo("Yaris","Toyota","rojo","01/02/03","Gasolina","Usado");
         listaVehiculos.addVehiculo(vehiculo1);
         System.out.println(" Se ha agregado el siguiente vehiculo: \n"+ vehiculo1);
         return vehiculo1;
