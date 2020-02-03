@@ -2,13 +2,13 @@ public class Cliente {
 
     private String nombre;
     private String apellidos;
-    private String NIV;
+    private String NIF;
     private String cuentaBancaria;
 
     public Cliente(String nombre,String apellidos,String NIV,String cuentaBancaria){
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.NIV = NIV;
+        this.NIF = NIV;
         this.cuentaBancaria = cuentaBancaria;
     }
 
@@ -28,12 +28,12 @@ public class Cliente {
         this.apellidos = apellidos;
     }
 
-    public String getNIV() {
-        return NIV;
+    public String getNIF() {
+        return NIF;
     }
 
-    public void setNIV(String NIV) {
-        this.NIV = NIV;
+    public void setNIF(String NIF) {
+        this.NIF = NIF;
     }
 
     public String getCuentaBancaria() {
@@ -49,7 +49,7 @@ public class Cliente {
         return " \nCliente{ \n" +
                 "  nombre: " + nombre + "\n" +
                 "  apellidos: " + apellidos + "\n" +
-                "  NIV: " + NIV + "\n" +
+                "  NIV: " + NIF + "\n" +
                 "  cuentaBancaria: " + cuentaBancaria + "\n" +
                 '}';
     }

@@ -5,15 +5,17 @@ public class Vehiculo {
     private String marca;
     private String color;
     private String fechaFabricacion;
-    private double combustion;
+    private String combustion;
+    private String estado;
     private double precio;
 
-    public Vehiculo(String modelo, String marca, String color, String fechaFabricacion, double combustion){
+    public Vehiculo(String modelo,String marca,String color,String fechaFabricacion,String combustion,String estado){
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.fechaFabricacion = fechaFabricacion;
         this.combustion = combustion;
+        this.estado = estado;
     }
 
     public String getModelo() {
@@ -48,11 +50,11 @@ public class Vehiculo {
         this.fechaFabricacion = fechaFabricacion;
     }
 
-    public double getCombustion() {
+    public String getCombustion() {
         return combustion;
     }
 
-    public void setCombustion(double combustion) {
+    public void setCombustion(String combustion) {
         this.combustion = combustion;
     }
 
@@ -72,6 +74,7 @@ public class Vehiculo {
                 "  color: " + color + "\n" +
                 "  fechaFabricacion: " + fechaFabricacion + "\n" +
                 "  combustion: " + combustion + "\n" +
+                "  estado: " + estado + "\n" +
                 "  precio: " + precio + "\n" +
                 '}';
     }
