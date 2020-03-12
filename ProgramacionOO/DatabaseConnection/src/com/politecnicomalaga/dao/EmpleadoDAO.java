@@ -45,9 +45,10 @@ public class EmpleadoDAO {
         return lista;
     }
 
-    public String buscar(String name)throws SQLException{
-        String result = String.valueOf(conn.read("SELECT nombre FROM Empleado WHERE nombre = '"+name+"'"));
-        return result;
+    public ArrayList<Empleado> updateTable(String name, String newName, int edad)throws SQLException{
+        int result = conn.update("UPDATE Empleado SET nombre='"+newName+"',edad='"+edad+"' WHERE nombre='"+name+"'");
+        ArrayList<Empleado> list = getEmpleados();
+        return list;
     }
 
     public ArrayList<Empleado> busquedaMenoresEdad() throws SQLException{

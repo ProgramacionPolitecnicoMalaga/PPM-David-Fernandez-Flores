@@ -56,16 +56,17 @@ public class ControladorEmpleado {
         return empleados;
     }
 
-    public String getBusqueda(String name){
-        String nombre = "";
+    public ArrayList<Empleado> consultaUpdate(String name,String newName,int edad){
+        ArrayList<Empleado> empleados = new ArrayList<>();
         try{
             EmpleadoDAO empleadoDAO = new EmpleadoDAO();
-            nombre = empleadoDAO.buscar(name);
+            empleados = empleadoDAO.updateTable(name,newName,edad);
         }
         catch (SQLException e){
             e.printStackTrace();
         }
-        return nombre;
+
+        return empleados;
     }
 
     public ArrayList<Empleado> mostrarMenoresDeEdad(){

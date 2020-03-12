@@ -24,12 +24,25 @@ public class VistaEmpleados {
     private JButton btnMayores;
     private JButton btnMenores;
     private ControladorEmpleado controlador;
+    private JButton[] buttons;
+
+    public void agregarBotones(){
+        buttons = new JButton[]{btnMenores, btnMayores, btnBuscar, btnBorrar, btnInsertar, btnUpdate};
+    }
+
+    public void style(){
+        agregarBotones();
+        for (int i=0; i<buttons.length;i++){
+            buttons[i].setBackground(Color.decode("#b3b3ff"));
+            buttons[i].setForeground(Color.BLACK);
+        }
+        tblEmpleados.setBackground(Color.decode("#e6e6ff"));
+    }
 
     public VistaEmpleados(ControladorEmpleado controlador){
         this.controlador = controlador;
         actualizarTabla(controlador.getEmpleados());
-        //btnMenores.setBackground(Color.decode("#ffff99"));
-
+        style();
         btnBuscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -45,7 +58,7 @@ public class VistaEmpleados {
                 DeleteDialog delete = new DeleteDialog();
                 delete.setLocationRelativeTo(SwingUtilities.getRoot((Component) actionEvent.getSource()));
                 delete.pack();
-                String nombreModificado = delete.getNombreBorrado();
+                String nombreModificado = delete.getNombreEscrito();
                 int resp = JOptionPane.showConfirmDialog(SwingUtilities.getRoot((Component) actionEvent.getSource()),"¿ Estas seguro de que desea borrar: "+nombreModificado+" ?");
                 if (resp == JOptionPane.OK_OPTION){
                     ArrayList<Empleado> listaEmpleados = controlador.getListaTrasBorrado(nombreModificado);
@@ -69,16 +82,20 @@ public class VistaEmpleados {
             }
         });
 
-        /*btnUpdate.addActionListener(new ActionListener() {
+        btnUpdate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 DeleteDialog update = new DeleteDialog();
                 update.setLocationRelativeTo(SwingUtilities.getRoot((Component) actionEvent.getSource()));
                 update.pack();
-                String nombrePaBuscar = update.getNombreBorrado();
-                txtPatron.setText(controlador.getBusqueda(nombrePaBuscar));
+                String nombreBusqueda = update.getNombreEscrito();
+                CreateDialog create = new CreateDialog();
+                create.setLocationRelativeTo(SwingUtilities.getRoot((Component) actionEvent.getSource()));
+                create.pack();
+                ArrayList<Empleado> empleados = controlador.consultaUpdate(nombreBusqueda,create.getNombre(),create.getEdad());
+                actualizarTabla(empleados);
             }
-        });*/
+        });
         btnMenores.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

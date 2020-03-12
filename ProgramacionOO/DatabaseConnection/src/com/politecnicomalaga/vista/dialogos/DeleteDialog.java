@@ -54,7 +54,7 @@ public class DeleteDialog extends JDialog {
         // add your code here if necessary
         dispose();
     }
-    public String getNombreBorrado(){
+    public String getNombreEscrito(){
         setVisible(true);
         return nombreBorrado;
     }
