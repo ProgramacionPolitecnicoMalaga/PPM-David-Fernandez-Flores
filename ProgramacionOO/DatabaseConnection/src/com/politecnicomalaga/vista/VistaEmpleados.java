@@ -23,11 +23,12 @@ public class VistaEmpleados {
     private JButton btnUpdate;
     private JButton btnMayores;
     private JButton btnMenores;
+    private JButton btnTodos;
     private ControladorEmpleado controlador;
     private JButton[] buttons;
 
     public void agregarBotones(){
-        buttons = new JButton[]{btnMenores, btnMayores, btnBuscar, btnBorrar, btnInsertar, btnUpdate};
+        buttons = new JButton[]{btnMenores, btnMayores, btnBuscar, btnBorrar, btnInsertar, btnUpdate, btnTodos};
     }
 
     public void style(){
@@ -48,6 +49,14 @@ public class VistaEmpleados {
             public void actionPerformed(ActionEvent actionEvent) {
                 String patron = txtPatron.getText();
                 ArrayList<Empleado> lista = controlador.getBusquedaPatron(patron);
+                actualizarTabla(lista);
+            }
+        });
+
+        btnTodos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                ArrayList<Empleado> lista = controlador.getEmpleados();
                 actualizarTabla(lista);
             }
         });
