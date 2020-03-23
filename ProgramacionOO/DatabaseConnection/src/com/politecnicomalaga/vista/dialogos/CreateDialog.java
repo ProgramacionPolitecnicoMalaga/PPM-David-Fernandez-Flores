@@ -69,12 +69,10 @@ public class CreateDialog extends JDialog {
     }
 
     public String getNombre(){
-        setVisible(true);
         return nombre;
     }
 
     public int getEdad(){
-        setVisible(true);
         return edad;
     }
 }
