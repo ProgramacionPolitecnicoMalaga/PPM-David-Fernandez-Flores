@@ -52,7 +52,6 @@ public class CreateDialog extends JDialog {
 
     private void onOK() {
         // add your code here
-        id = Integer.parseInt(txtId.getText());
         nombre = txtNombre.getText();
         edad = Integer.parseInt(txtEdad.getText());
         setVisible(false);
@@ -63,9 +62,8 @@ public class CreateDialog extends JDialog {
         dispose();
     }
 
-    public int getId(){
+    public void crearDialogo(){
         setVisible(true);
-        return id;
     }
 
     public String getNombre(){

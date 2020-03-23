@@ -82,7 +82,8 @@ public class VistaEmpleados {
                 CreateDialog insert = new CreateDialog();
                 insert.setLocationRelativeTo(SwingUtilities.getRoot((Component) actionEvent.getSource()));
                 insert.pack();
-                int id = insert.getId();
+                insert.crearDialogo();
+                int id = 0;
                 String nombre = insert.getNombre();
                 int edad = insert.getEdad();
                 JOptionPane.showMessageDialog(SwingUtilities.getRoot((Component) actionEvent.getSource()),""+nombre+" será creado en breve...");
