@@ -19,7 +19,6 @@ public class VentanaPrincipal {
     private JScrollPane pnlScrollRenders;
     private JScrollPane pnlScrollNombres;
     private JList listNames;
-    private JTextArea txaAreaNombres;
     private Controlador controlador = new Controlador();
 
     public VentanaPrincipal(){
@@ -34,7 +33,6 @@ public class VentanaPrincipal {
                 registro.mostrar();
                 Credencial credencial = DataTransferCredenciales.transformar(data);
                 controlador.crear(credencial);
-                escrituraNombres();
                 renderModel.addElement(credencial);
             }
         });
@@ -57,19 +55,20 @@ public class VentanaPrincipal {
     }
 
     public void escrituraNombres(){
-        for (int i=0; i<controlador.leerNombres().size(); i++){
-            txaAreaNombres.setRows(controlador.leerNombres().size());
-            txaAreaNombres.setText(String.valueOf(controlador.leerNombres().get(i)));
+        int selectResult = controlador.getCredenciales().size();
+        for (int i = 0; i < selectResult; i++){
+            nameList.addElement(controlador.getCredenciales().get(i));
         }
     }
 
     private void createUIComponents() {
-        txaAreaNombres = new JTextArea();
-        txaAreaNombres.setLineWrap(true);
         list = new JList();
         listNames = new JList();
         renderModel = new DefaultListModel<>();
+        nameList = new DefaultListModel<>();
         list.setModel(renderModel);
+        listNames.setModel(nameList);
         list.setCellRenderer(new RenderCredencial());
+        listNames.setCellRenderer(new NameRender());
     }
 }

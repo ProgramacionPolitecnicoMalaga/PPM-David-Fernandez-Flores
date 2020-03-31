@@ -14,11 +14,11 @@ public class ConsultasDAO {
     public ConsultasDAO() throws SQLException {
         conn = new DBConn();
     }
-    public ArrayList<String> getNombres() throws SQLException{
-        ResultSet res = conn.read("SELECT nombre FROM credenciales");
-        ArrayList<String> credenciales = new ArrayList<>();
+    public ArrayList<Credencial> getNombres() throws SQLException{
+        ResultSet res = conn.read("SELECT * FROM credenciales");
+        ArrayList<Credencial> credenciales = new ArrayList<>();
         while (res.next()){
-            credenciales.add(res.getString("nombre"));
+            credenciales.add(new Credencial(res.getString("nombre"),"0",res.getString("algoritmo"),res.getString("hash"),res.getString("salt")));
         }
         return credenciales;
     }
@@ -28,9 +28,9 @@ public class ConsultasDAO {
     /*public int create (Credencial credencial) throws SQLException {
         return create(credencial.getNombre(),credencial.getHash(),credencial.getAlgoritmo());
     }*/
-    public ArrayList<String> creacion(Credencial credencial) throws SQLException{
+    public ArrayList<Credencial> creacion(Credencial credencial) throws SQLException{
         int res = create(credencial);
-        ArrayList<String> credenciales = getNombres();
+        ArrayList<Credencial> credenciales = getNombres();
         return credenciales;
     }
 

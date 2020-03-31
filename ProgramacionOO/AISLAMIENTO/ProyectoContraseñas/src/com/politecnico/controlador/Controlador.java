@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Controlador {
-    public ArrayList<String> crear(Credencial credencial){
-        ArrayList<String> credenciales = new ArrayList<>();
+    public ArrayList<Credencial> crear(Credencial credencial){
+        ArrayList<Credencial> credenciales = new ArrayList<>();
         try {
             ConsultasDAO cons = new ConsultasDAO();
             credenciales = cons.creacion(credencial);
@@ -17,8 +17,8 @@ public class Controlador {
         }
         return credenciales;
     }
-    public ArrayList<String> leerNombres(){
-        ArrayList<String> nombres = new ArrayList<>();
+    public ArrayList<Credencial> getCredenciales(){
+        ArrayList<Credencial> nombres = new ArrayList<>();
         try{
             ConsultasDAO cons = new ConsultasDAO();
             nombres = cons.getNombres();

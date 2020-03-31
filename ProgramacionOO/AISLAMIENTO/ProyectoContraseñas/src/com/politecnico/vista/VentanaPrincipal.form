@@ -44,7 +44,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="9d353" class="javax.swing.JTextArea" binding="txaAreaNombres" custom-create="true">
+          <component id="abd3d" class="javax.swing.JList" binding="listNames">
             <constraints/>
             <properties/>
           </component>
