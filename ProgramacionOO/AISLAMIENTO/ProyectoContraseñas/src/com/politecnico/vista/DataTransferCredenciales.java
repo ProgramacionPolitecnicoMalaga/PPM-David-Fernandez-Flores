@@ -8,6 +8,7 @@ public class DataTransferCredenciales {
         String contraseña = (String) data.get("pass");
         String algoritmo = (String) data.get("algoritmo");
         String hash = (String) data.get("hash");
-        return new Credencial(nombre,contraseña,algoritmo,hash);
+        String salt = (String) data.get("salt");
+        return new Credencial(nombre,contraseña,algoritmo,hash,salt);
     }
 }

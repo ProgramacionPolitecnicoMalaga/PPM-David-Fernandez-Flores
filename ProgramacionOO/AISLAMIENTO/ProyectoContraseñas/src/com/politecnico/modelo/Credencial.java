@@ -5,12 +5,14 @@ public class Credencial {
     private String contraseña;
     private String algoritmo;
     private String hash;
+    private String salt;
 
-    public Credencial(String nombre,String contraseña,String algoritmo, String hash){
+    public Credencial(String nombre,String contraseña,String algoritmo, String hash,String salt){
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.algoritmo = algoritmo;
         this.hash = hash;
+        this.salt = salt;
     }
 
     public String getNombre() {
@@ -37,11 +39,11 @@ public class Credencial {
         this.algoritmo = algoritmo;
     }
 
-    public String getHash() {
-        return hash;
-    }
+    public String getHash() { return hash; }
 
-    public void setHash(String hash) {
-        this.hash = hash;
-    }
+    public void setHash(String hash) { this.hash = hash; }
+
+    public String getSalt() { return salt; }
+
+    public void setSalt(String salt) { this.salt = salt; }
 }

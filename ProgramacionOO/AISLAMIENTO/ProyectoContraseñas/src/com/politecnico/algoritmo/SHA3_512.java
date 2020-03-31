@@ -12,7 +12,7 @@ public class SHA3_512 {
 
     public SHA3_512() throws NoSuchAlgorithmException{}
 
-    public String generateHash(String datos, String algoritmo,byte[] salt) throws NoSuchAlgorithmException{
+    public String generateHash(String datos, String algoritmo, byte[] salt) throws NoSuchAlgorithmException{
         MessageDigest digest = MessageDigest.getInstance(algoritmo);
         digest.reset();
         digest.update(salt);

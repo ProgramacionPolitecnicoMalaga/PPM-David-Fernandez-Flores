@@ -20,6 +20,7 @@ public class RenderCredencial implements ListCellRenderer<Credencial> {
     private JPanel pnlRender;
     private JPanel pnlImagen;
     private JPanel pnlInterior;
+    private JLabel lblSalt;
     private Image imgCorrecta;
     private Image imgErronea;
     private GestorAlgoritmo gestor;
@@ -29,10 +30,9 @@ public class RenderCredencial implements ListCellRenderer<Credencial> {
         gestor = new GestorAlgoritmo();
         lblnombre.setText(credencial.getNombre());
         lblContraseña.setText(credencial.getContraseña());
-        String hash = gestor.getHash(credencial.getContraseña(),credencial.getAlgoritmo());
-        credencial.setHash(hash);
         lblHash.setText(credencial.getHash());
         lblAlgoritmo.setText(credencial.getAlgoritmo());
+        lblSalt.setText(credencial.getSalt());
         return pnlRender;
     }
 

@@ -11,16 +11,19 @@ import java.awt.event.ActionListener;
 
 public class VentanaPrincipal {
     private DefaultListModel<Credencial> renderModel;
+    private DefaultListModel<String> nameList;
     private JPanel pnlMain;
     private JList list;
     private JButton btnRegister;
     private JButton btnVerify;
     private JScrollPane pnlScrollRenders;
     private JScrollPane pnlScrollNombres;
+    private JList listNames;
     private JTextArea txaAreaNombres;
     private Controlador controlador = new Controlador();
 
     public VentanaPrincipal(){
+        escrituraNombres();
         btnRegister.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -30,8 +33,8 @@ public class VentanaPrincipal {
                 registro.pack();
                 registro.mostrar();
                 Credencial credencial = DataTransferCredenciales.transformar(data);
-                //controlador.crear(credencial);
-                //escrituraNombres();
+                controlador.crear(credencial);
+                escrituraNombres();
                 renderModel.addElement(credencial);
             }
         });
@@ -55,12 +58,16 @@ public class VentanaPrincipal {
 
     public void escrituraNombres(){
         for (int i=0; i<controlador.leerNombres().size(); i++){
-            txaAreaNombres.setText(controlador.leerNombres().get(i));
+            txaAreaNombres.setRows(controlador.leerNombres().size());
+            txaAreaNombres.setText(String.valueOf(controlador.leerNombres().get(i)));
         }
     }
 
     private void createUIComponents() {
+        txaAreaNombres = new JTextArea();
+        txaAreaNombres.setLineWrap(true);
         list = new JList();
+        listNames = new JList();
         renderModel = new DefaultListModel<>();
         list.setModel(renderModel);
         list.setCellRenderer(new RenderCredencial());

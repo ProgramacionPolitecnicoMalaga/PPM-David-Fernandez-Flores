@@ -1,5 +1,7 @@
 package com.politecnico.vista;
 
+import com.politecnico.algoritmo.GestorAlgoritmo;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -16,9 +18,11 @@ public class RegisterDialog extends JDialog {
     //private JPasswordField pswPassword;
     private JTextField txtHash;
     private DataTransfer data;
+    private GestorAlgoritmo gestorAlgoritmo;
 
     public RegisterDialog(DataTransfer data) {
         this.data = data;
+        gestorAlgoritmo = new GestorAlgoritmo();
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -57,6 +61,8 @@ public class RegisterDialog extends JDialog {
         data.put("nombre",txtNombre.getText());
         data.put("pass",txtPassword.getText());
         data.put("algoritmo",(String) item);
+        data.put("hash",gestorAlgoritmo.getHash(txtPassword.getText(),(String) item));
+        data.put("salt",String.valueOf(gestorAlgoritmo.getSalt()));
         dispose();
     }
 

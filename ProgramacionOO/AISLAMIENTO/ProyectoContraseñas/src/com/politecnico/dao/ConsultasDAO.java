@@ -22,12 +22,12 @@ public class ConsultasDAO {
         }
         return credenciales;
     }
-    public int create (String nombre,String hash,String algoritmo) throws SQLException {
-        return conn.CRUD("INSERT INTO credenciales(nombre, hash, algoritmo, salt) VALUES ('"+nombre+"','"+hash+"','"+algoritmo+"')");
+    public int create (Credencial cr) throws SQLException {
+        return conn.CRUD("INSERT INTO credenciales(nombre, hash, algoritmo, salt) VALUES ('"+cr.getNombre()+"','"+cr.getHash()+"','"+cr.getAlgoritmo()+"','"+cr.getSalt()+"')");
     }
-    public int create (Credencial credencial) throws SQLException {
+    /*public int create (Credencial credencial) throws SQLException {
         return create(credencial.getNombre(),credencial.getHash(),credencial.getAlgoritmo());
-    }
+    }*/
     public ArrayList<String> creacion(Credencial credencial) throws SQLException{
         int res = create(credencial);
         ArrayList<String> credenciales = getNombres();

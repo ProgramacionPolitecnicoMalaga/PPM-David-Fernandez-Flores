@@ -20,7 +20,7 @@ public class GestorAlgoritmo {
         String hashedPass = "";
         if (algoritmo.equals("SHA-512")){
             try{
-            hashedPass = sha.generateHash(pass,algoritmo,SHA3_512.createSalt());
+            hashedPass = sha.generateHash(pass,algoritmo,getSalt());
             } catch (NoSuchAlgorithmException e){
                 e.printStackTrace();
             }
@@ -29,5 +29,8 @@ public class GestorAlgoritmo {
             hashedPass = bcrypt.getPasswordHash(pass);
         }
         return hashedPass;
+    }
+    public byte[] getSalt(){
+        return SHA3_512.createSalt();
     }
 }
