@@ -17,32 +17,39 @@ public class ConversionMedidasTest {
     }
 
     @Test
-    public void inchToCm() {
+    public void UnaPulgadaToCm() {
         //---- 1 inch = 2,54 cm ----\\
         valorEsperado = 2.54;
         valorObtenido = conversor.inchACm(1);
         assertEquals((long)valorEsperado,(long)valorObtenido);
+    }
 
+    @Test
+    public void DocePulgadasToCm(){
         //---- 12 inch = 30,48 cm ----\\
         valorEsperado = 30.48;
         valorObtenido = conversor.inchACm(12);
         assertEquals((long)valorEsperado,(long)valorObtenido);
-
-
     }
 
     @Test
-    public void cmToInches(){
+    public void DoceCmToPulgadas(){
         //---- 12 cm = 4,72441 inch ----\\
         valorEsperado = 4.72441;
         valorObtenido = conversor.cmAInches(12);
         assertEquals((long)valorEsperado,(long)valorObtenido);
+    }
 
+    @Test
+    public void CeroCmToPulgadas(){
         //---- 0 cm = 0 inch ----\\
         valorEsperado = 0;
         valorObtenido = conversor.cmAInches(0);
         assertEquals((long)valorEsperado,(long)valorObtenido);
+    }
 
+    @Test
+    public void MedioCmToPulgadas(){
         //---- 0,5 cm = 0,1968 inch ----\\
         valorEsperado = 0.1968;
         valorObtenido = conversor.cmAInches(0.5);
