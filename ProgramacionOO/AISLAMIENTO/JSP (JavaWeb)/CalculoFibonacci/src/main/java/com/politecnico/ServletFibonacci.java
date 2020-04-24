@@ -27,7 +27,7 @@ public class ServletFibonacci extends HttpServlet {
         serieFibonacci.calculoFibonacci(numeroPosicion,serieDeFibonacci);
         numeroFinal = serieFibonacci.getPosicionDeFibonacci(numeroPosicion,serieDeFibonacci);
         req.setAttribute("resultado",numeroFinal);
-        RequestDispatcher view = req.getRequestDispatcher("resultadoCalculo.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("/resultadoCalculo.jsp");
         view.forward(req,resp);
     }
 }

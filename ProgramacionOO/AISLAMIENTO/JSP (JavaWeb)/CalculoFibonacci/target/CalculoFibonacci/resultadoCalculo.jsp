@@ -14,10 +14,13 @@
 </head>
 <body>
 <%
-    PrintWriter printer = response.getWriter();
-%>
-<label>Elemento seleccionado: </label> <input type="text" value='<% printer.print(request.getParameter("numPosicion")); %>' class="form-control">
-<br>
-<label>Resultado del elemento: </label> <input type="text" value='<% printer.print(request.getAttribute("resultado")); %>' class="form-control">
+    //PrintWriter printer = response.getWriter();
+   out.print("<label>Elemento seleccionado: </label>"); %>
+<% String posicion = (String) request.getParameter("numPosicion"); %>
+<% out.print("<input type='text' value=" + posicion + " class='form-control'>"); %>
+<% out.print("<br>");
+   out.print("<label>Resultado del elemento: </label>"); %>
+<% String resultado = String.valueOf(request.getAttribute("resultado")); %>
+<% out.print("<input type='text' value=" + resultado + " class='form-control'>"); %>
 </body>
 </html>
