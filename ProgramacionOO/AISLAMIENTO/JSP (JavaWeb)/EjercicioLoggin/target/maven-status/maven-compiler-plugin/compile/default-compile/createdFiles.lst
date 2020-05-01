@@ -1,0 +1,3 @@
+com\politecnico\servlet\SumaServlet.class
+com\politecnico\logging\Logging.class
+com\politecnico\operaciones\Suma.class
