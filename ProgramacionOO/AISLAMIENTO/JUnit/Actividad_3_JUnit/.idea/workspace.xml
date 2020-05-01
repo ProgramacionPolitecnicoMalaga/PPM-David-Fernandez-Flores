@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89899fdf-f9cc-44ab-bb1c-58b49e3a569e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aqWkBXETR0aU4e3FUIXDrldOrV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaWeb/CalculoFibonacci" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.politecnico" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CarreraTest.setPosicion">
+    <configuration name="All in Actividad_3_JUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Actividad_3_JUnit" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarreraTest.insertarCuatroParticipantes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Actividad_3_JUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.politecnico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.politecnico" />
+      <option name="MAIN_CLASS_NAME" value="com.politecnico.CarreraTest" />
+      <option name="METHOD_NAME" value="insertarCuatroParticipantes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarreraTest.insertarRepetido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Actividad_3_JUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.politecnico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.politecnico" />
+      <option name="MAIN_CLASS_NAME" value="com.politecnico.CarreraTest" />
+      <option name="METHOD_NAME" value="insertarRepetido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarreraTest.listaNoVaciaTrasInsercion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Actividad_3_JUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.politecnico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.politecnico" />
+      <option name="MAIN_CLASS_NAME" value="com.politecnico.CarreraTest" />
+      <option name="METHOD_NAME" value="listaNoVaciaTrasInsercion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarreraTest.setPosicion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Actividad_3_JUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.politecnico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.politecnico" />
+      <option name="MAIN_CLASS_NAME" value="com.politecnico.CarreraTest" />
+      <option name="METHOD_NAME" value="setPosicion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CarreraTest.setPosicion" />
+        <item itemvalue="JUnit.All in Actividad_3_JUnit" />
+        <item itemvalue="JUnit.CarreraTest.insertarRepetido" />
+        <item itemvalue="JUnit.CarreraTest.insertarCuatroParticipantes" />
+        <item itemvalue="JUnit.CarreraTest.listaNoVaciaTrasInsercion" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89899fdf-f9cc-44ab-bb1c-58b49e3a569e" name="Default Changelist" comment="" />
+      <created>1587463744622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587463744622</updated>
+      <workItem from="1587463748114" duration="3529000" />
+      <workItem from="1587484744400" duration="15000" />
+      <workItem from="1587638113331" duration="553000" />
+      <workItem from="1587645099789" duration="679000" />
+      <workItem from="1588346370945" duration="1076000" />
+      <workItem from="1588348486909" duration="200000" />
+      <workItem from="1588348709969" duration="2886000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Deployment" timestamp="1588350139751">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1588350139751" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587645889967">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587645889967" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1588351607834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588351607834" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1588347911370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588347911370" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1588348712486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588348712486" />
+    <state x="454" y="67" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588347867364">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="67" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1588347867364" />
+  </component>
+</project>
