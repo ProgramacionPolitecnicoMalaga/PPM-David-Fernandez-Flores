@@ -52,7 +52,7 @@ public class CarreraTest {
         assertEquals(4,carrera.getTotalParticipantes(lista));
     }
     @Test
-    public void setPosicion(){
+    public void cambioDePosicion(){
         // Given
         String wick = "John Wick";
         carrera.addParticipante("James Bond",lista);
@@ -61,8 +61,35 @@ public class CarreraTest {
         // When
         carrera.setPosicion(wick,1,lista);
 
-        //Then
+        // Then
         assertEquals(wick,carrera.getParticipantePorPosicion(1,lista));
+    }
+    @Test
+    public void ComparacionListaClonDeLista(){
+        // Given
+        ArrayList<String> newlist = carrera.getListadoParticipantes(lista);
+        ArrayList<String> clonedList = carrera.cloneCarrera(lista);
+
+        // Then
+        assertNotEquals(clonedList,newlist);
+    }
+    @Test
+    public void ComparacionDeArraysConCambioDePosicion(){
+        // Given
+        carrera.addParticipante("Thomas Shelby",lista);
+        carrera.addParticipante("Sheldon Cooper",lista);
+        carrera.addParticipante("Vito Corleone",lista);
+        carrera.addParticipante("Barney Stinson",lista);
+        ArrayList<String> initialList = carrera.getListadoParticipantes(lista);
+
+        // When
+        carrera.setPosicion("Barney Stinson",1,lista);
+        carrera.setPosicion("Sheldon Cooper",3,lista);
+        carrera.setPosicion("Thomas Shelby",2,lista);
+        ArrayList<String> finalList = carrera.getListadoParticipantes(lista);
+
+        // Then
+        assertArrayEquals(initialList.toArray(),finalList.toArray());
     }
     @After
     public void tearDown() throws Exception {
