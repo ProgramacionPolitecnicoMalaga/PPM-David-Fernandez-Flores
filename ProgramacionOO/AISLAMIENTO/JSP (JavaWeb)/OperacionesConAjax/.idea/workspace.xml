@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29b408a7-e216-4385-8397-a6988bd11760" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bXp0WEgWUpEdB2nEsawXRexuna" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\IdeaProjects\OperacionesConAjax\src\main\webapp" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29b408a7-e216-4385-8397-a6988bd11760" name="Default Changelist" comment="" />
+      <created>1588788069430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588788069430</updated>
+      <workItem from="1588788072614" duration="4981000" />
+      <workItem from="1588797836977" duration="1676000" />
+      <workItem from="1588806705977" duration="2593000" />
+      <workItem from="1588849431233" duration="8506000" />
+      <workItem from="1588949384997" duration="4135000" />
+      <workItem from="1589024886581" duration="4586000" />
+      <workItem from="1589048349340" duration="466000" />
+      <workItem from="1589048940978" duration="422000" />
+      <workItem from="1589049390060" duration="433000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Deployment" timestamp="1589048497847">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1589048497847" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588862608525">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588862608525" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1588808753252">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1588808753252" />
+    <state x="461" y="105" key="FileChooserDialogImpl" timestamp="1589048769282">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="461" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589048769282" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1589048142026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589048142026" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1589048142026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589048142026" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1589048142026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589048142026" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1589048142026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589048142026" />
+    <state x="167" y="20" width="916" height="708" key="SettingsEditor" timestamp="1589049368928">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="167" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589049368928" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589049393431">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589049393431" />
+    <state x="526" y="94" key="ftp.server.browser" timestamp="1588861290659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="94" key="ftp.server.browser/0.0.1366.728@0.0.1366.728" timestamp="1588861290659" />
+    <state x="553" y="257" key="publish.login" timestamp="1589048434670">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="553" y="257" key="publish.login/0.0.1366.728@0.0.1366.728" timestamp="1589048434670" />
+  </component>
+</project>
