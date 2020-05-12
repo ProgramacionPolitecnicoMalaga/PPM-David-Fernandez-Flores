@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f14dab11-ca39-40c8-9704-0a3ef33d48d4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bnzVjYqBBkfHMnckyeVpO9QI9f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f14dab11-ca39-40c8-9704-0a3ef33d48d4" name="Default Changelist" comment="" />
+      <created>1589282670177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589282670177</updated>
+      <workItem from="1589282672727" duration="7648000" />
+      <workItem from="1589298790272" duration="6823000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Deployment" timestamp="1589304249566">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1589304249566" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1589305634882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589305634882" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1589305634882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589305634882" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1589305634882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589305634882" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1589305634882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589305634882" />
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1589283559023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1589283559023" />
+    <state x="526" y="94" key="ftp.server.browser" timestamp="1589304223718">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="94" key="ftp.server.browser/0.0.1366.728@0.0.1366.728" timestamp="1589304223718" />
+  </component>
+</project>
